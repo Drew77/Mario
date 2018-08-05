@@ -10,14 +10,29 @@ body {
     background-repeat: repeat;
 }
 
+@font-face {
+    font-family: Mario;
+    src: url(/dist/tlpsmb.ttf);
+}
+
 header {
     h1 {
         background: red;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
         text-align: center;
+        border-radius: 4px;
+        border-top: 2px solid #fff;
+        border-left: 2px solid #fff;
         padding: 20px;
-        font-family: Helvetica, sans-serif;
+        font-family: Mario;
         color: #fff;
+        text-shadow: 2px 2px #000;
     }
+}
+
+.mute svg:hover {
+    cursor: pointer;
 }
 
 .container {
@@ -25,9 +40,30 @@ header {
     max-width: 680px;
     width: 100%;
     margin: 50px auto;
+
+    button {
+        padding: 20px;
+        max-width: 200px;
+        width: 100%;
+        margin: 40px auto;
+        font-size: 28px;
+        background: red;
+        border-radius: 4px;
+        border: 1px solid red;
+        color: #fff;
+        font-weight: 700;
+        font-family: helvetica, sans-serif;
+        transition: color 0.3s, background 0.3s;
+        &:hover {
+            cursor: pointer;
+            color: red;
+            background: #fff;
+        }
+    }
 }
 
 .board {
+    margin-top: 40px;
     margin-right: -20px;
     display: flex;
     flex-wrap: wrap;
@@ -72,6 +108,24 @@ header {
     }
 }
 
+.mute {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.winner {
+    width: 100%;
+    font-size: 40px;
+    font-family: Helvetica, sans-serif;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+    background: red;
+    padding: 40px;
+    text-align: center;
+    color: #fff;
+}
 
 @media screen and (max-width: 700px){
     .tile {
