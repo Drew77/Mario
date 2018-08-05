@@ -4,8 +4,8 @@ import './scss/main.scss';
 const _ = require('underscore');
 
 const board = document.querySelector('.board');
-const music = new Audio('/dist/audio/theme.mp3');
-const win = new Audio('/dist/audio/win.mp3');
+const music = new Audio('dist/audio/theme.mp3');
+const win = new Audio('dist/audio/win.mp3');
 const mute = document.querySelector('.mute');
 
 
@@ -94,8 +94,8 @@ const game = {
     let tilesHTML = '';
     this.tiles.forEach((tile, i) => {
       tilesHTML += `<div class="tile hidden" data-id="${i}">
-                      <div class="tile__inner question-mark" data-type="${tile}" style="background-image: url('/dist/images/qmark.jpg')"></div>
-                      <div class="tile__inner" style="background-image: url('/dist/images/${tile}.jpg')"></div>
+                      <div class="tile__inner question-mark" data-type="${tile}" style="background-image: url('dist/images/qmark.jpg')"></div>
+                      <div class="tile__inner" style="background-image: url('dist/images/${tile}.jpg')"></div>
                     </div>`;
     });
     board.innerHTML = tilesHTML;

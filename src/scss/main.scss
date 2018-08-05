@@ -5,14 +5,14 @@
 }
 
 body {
-    background-image: url('/dist/images/background.jpg');
+    background-image: url('dist/images/background.jpg');
     background-size: cover;
     background-repeat: repeat;
 }
 
 @font-face {
     font-family: Mario;
-    src: url(/dist/tlpsmb.ttf);
+    src: url(dist/tlpsmb.ttf);
 }
 
 header {
